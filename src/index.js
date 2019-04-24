@@ -153,7 +153,7 @@ export default class SwipeUpDown extends Component<Props> {
           styles.wrapSwipe,
           {
             height: this.SWIPE_HEIGHT,
-            marginTop: MARGIN_TOP
+            marginTop: DEVICE_HEIGHT/3
           },
           !itemMini && collapsed && { marginBottom: -200 },
           style
