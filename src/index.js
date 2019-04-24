@@ -100,7 +100,7 @@ export default class SwipeUpDown extends Component<Props> {
       if (this.customStyle.style.top <= DEVICE_HEIGHT / 2) {
         this.swipeIconRef &&
           this.swipeIconRef.setState({
-            icon: images.arrow_down,
+            icon: images.minus,
             showIcon: true
           });
       }
@@ -122,7 +122,7 @@ export default class SwipeUpDown extends Component<Props> {
     this.customStyle.style.top = 0;
     this.customStyle.style.height = DEVICE_HEIGHT;
     this.swipeIconRef &&
-      this.swipeIconRef.setState({ icon: images.arrow_down, showIcon: true });
+      this.swipeIconRef.setState({ icon: images.minus, showIcon: true });
     this.updateNativeProps();
     this.state.collapsed && this.setState({ collapsed: false });
     this.checkCollapsed = false;
