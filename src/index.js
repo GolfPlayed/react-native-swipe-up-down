@@ -153,7 +153,7 @@ export default class SwipeUpDown extends Component<Props> {
           styles.wrapSwipe,
           {
             height: this.SWIPE_HEIGHT,
-            marginTop: DEVICE_HEIGHT/3
+            // marginTop: DEVICE_HEIGHT/3
           },
           !itemMini && collapsed && { marginBottom: -200 },
           style
@@ -163,19 +163,7 @@ export default class SwipeUpDown extends Component<Props> {
           onClose={() => this.showMini()}
           hasRef={ref => (this.swipeIconRef = ref)}
         />
-        {collapsed ? (
-          itemMini ? (
-            <TouchableOpacity
-              activeOpacity={this.disablePressToShow ? 1 : 0.6}
-              style={{ height: this.SWIPE_HEIGHT }}
-              onPress={() => !this.disablePressToShow && this.showFull()}
-            >
-              {itemMini}
-            </TouchableOpacity>
-          ) : null
-        ) : (
-          itemFull
-        )}
+        {itemFull}
       </View>
     );
   }
