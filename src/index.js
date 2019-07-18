@@ -67,7 +67,7 @@ export default class SwipeUpDown extends Component<Props> {
 
   onMoveShouldSetPanResponder = (event, gestureState) => {
     const { dx, dy } = gestureState;
-    if (dy>0) {
+    if (dy>1) {
       this.props.onMoveDown();
     }
     return dy > 1;
