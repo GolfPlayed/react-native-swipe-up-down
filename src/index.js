@@ -70,7 +70,7 @@ export default class SwipeUpDown extends Component<Props> {
     if (dy>0) {
       this.props.onMoveDown();
     }
-    return dx !== 0 && dy !== 0 && dy / dx !== Math.abs(0) && dy / dx !== - 1
+    return dy > 1;
   };
 
   updateNativeProps() {
